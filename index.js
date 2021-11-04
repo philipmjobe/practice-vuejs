@@ -6,11 +6,17 @@ var app = new Vue({
     return {
       message: "Hello from JavaScript!",
       showInfo: false,
+      fruits: ["apple", "grapes", "orange"],
+      newFruits: "",
     };
   },
   methods: {
     changeMessage: function () {
       this.message = "INSERT EVIL LAUGH";
+    },
+    addNewFruit: function () {
+      this.fruits.push(this.newFruits);
+      this.newFruits = "";
     },
   },
 });
