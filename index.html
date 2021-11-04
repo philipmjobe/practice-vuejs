@@ -11,6 +11,10 @@
     <div id="app">
       <p>{{ message }}</p>
       <button v-on:click="changeMessage()">Click Me!</button>
+      <div>
+        <button v-on:click="showInfo = !showInfo">Toggle</button>
+        <p v-if="showInfo">Extra Info</p>
+      </div>
     </div>
     <div id="app-2">
       <span v-bind:title="message">
