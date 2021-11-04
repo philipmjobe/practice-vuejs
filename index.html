@@ -5,6 +5,12 @@
     <title>Practice Vue.js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="index.js" defer></script>
+    <style>
+      .disabled {
+        color:blue;
+        transition: color 1s ease;
+      }
+    </style>
   </head>
   <body>
     <h1>Hello from HTML!</h1>
@@ -13,7 +19,7 @@
       <button v-on:click="changeMessage()">Click Me!</button>
       <div>
         <button v-on:click="showInfo = !showInfo">Toggle</button>
-        <p v-if="showInfo">Extra Info</p>
+        <p v-bind:class="{ disabled: showInfo}">Extra Info</p>
       </div>
     </div>
     <div id="app-2">
