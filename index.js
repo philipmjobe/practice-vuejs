@@ -7,6 +7,11 @@ var app = new Vue({
       message: "Hello from JavaScript!",
     };
   },
+  methods: {
+    changeMessage: function () {
+      this.message = "INSERT EVIL LAUGH";
+    },
+  },
 });
 
 var app2 = new Vue({
